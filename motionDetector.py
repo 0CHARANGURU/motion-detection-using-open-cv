@@ -3,7 +3,7 @@ import numpy
 
 def motionDetection():
     
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(0) #To capture video on real time
     ret, frame1 = cap.read()
     ret, frame2 = cap.read()
 
