@@ -1,19 +1,15 @@
-# importing libraries
 import cv2
 import numpy
 
-# Defining a function motionDetection
 def motionDetection():
     # capturing video in real time
     cap = cv2.VideoCapture(0)
-
-    # reading frames sequentially
     ret, frame1 = cap.read()
     ret, frame2 = cap.read()
 
     while cap.isOpened():
 
-        # difference between the frames
+        
         diff = cv2.absdiff(frame1, frame2)
         diff_gray = cv2.cvtColor(diff, cv2.COLOR_BGR2GRAY)
         blur = cv2.GaussianBlur(diff_gray, (5, 5), 0)
